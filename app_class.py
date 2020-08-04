@@ -47,7 +47,6 @@ class App:
         pygame.quit()
         sys.exit()
 
-############################ HELPER FUNCTIONS ##################################
 
     def draw_text(self, words, screen, pos, size, colour, font_name, centered=False):
         font = pygame.font.SysFont(font_name, size)
@@ -115,7 +114,6 @@ class App:
         self.state = "playing"
 
 
-########################### INTRO FUNCTIONS ####################################
 
     def start_events(self):
         for event in pygame.event.get():
@@ -137,7 +135,7 @@ class App:
                        START_TEXT_SIZE, (255, 255, 255), START_FONT)
         pygame.display.update()
 
-########################### PLAYING FUNCTIONS ##################################
+
 
     def playing_events(self):
         for event in pygame.event.get():
@@ -194,7 +192,6 @@ class App:
                                (int(coin.x*self.cell_width)+self.cell_width//2+TOP_BOTTOM_BUFFER//2,
                                 int(coin.y*self.cell_height)+self.cell_height//2+TOP_BOTTOM_BUFFER//2), 5)
 
-########################### GAME OVER FUNCTIONS ################################
 
     def game_over_events(self):
         for event in pygame.event.get():
